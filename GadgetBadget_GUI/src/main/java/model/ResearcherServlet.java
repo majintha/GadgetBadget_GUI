@@ -15,7 +15,7 @@ public class ResearcherServlet {
 		try
 		{ 
 			Class.forName("com.mysql.jdbc.Driver");  
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test/researcher_gui?useTimezone=true&serverTimezone=UTC", "root", ""); 
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?useTimezone=true&serverTimezone=UTC", "root", ""); 
 		} 
 		catch (Exception e) 
 		{

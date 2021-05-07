@@ -48,7 +48,7 @@ function onItemSaveComplete(response, status) {
 			
 			$("#alertSuccess").text("Successfully saved.");
 			$("#alertSuccess").show();
-			$("#InvestmentGrid").html(resultSet.data);
+			$("#ResearcherGrid").html(resultSet.data);
 			
 		} else if (resultSet.status.trim() == "error") {
 			
