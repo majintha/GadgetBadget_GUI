@@ -51,22 +51,19 @@
 						    <label class="form-label" for="form6Example3" class="col-sm-2 col-form-label col-form-label-sm">researcher Address:</label>
 						    <input type="text" id="researcherAddress" class="form-control" name="researcherAddress" placeholder="Enter Your Address">						    
 						</div>
+						
+						<div class="form-outline mb-4">
+						    <label class="form-label" for="form6Example3" class="col-sm-2 col-form-label col-form-label-sm">researcher Product Type:</label>
+						    <input type="text" id="researcherProductType" class="form-control" name="researcherProductType" placeholder="Enter ptoduct type..">						    
+						</div>
+						
+						<div class="form-outline mb-4">
+						    <label class="form-label" for="form6Example3" class="col-sm-2 col-form-label col-form-label-sm"> Registered Date:</label>
+						    <input type="text" id="researcherReDate" class="form-control" name="researcherReDate" placeholder="Enter Your Registered Date">						    
+						</div>
 					
 						 
-						<div class="row mb-4">
-						    <div class="col">
-						      <div class="form-outline">
-						        <label class="form-label" for="form6Example1" class="col-sm-2 col-form-label col-form-label-sm">Product Type:</label>
-						        <input type="text" id="researcherProductType" class="form-control" name="researcherProductType" placeholder="Product Type.">						        
-						      </div>
-						    </div>
-						    <div class="col">
-						      <div class="form-outline">
-								<label class="form-label" for="form6Example2" class="col-sm-2 col-form-label col-form-label-sm">Registerd Date:</label>
-						        <input type="text" id="researcherReDate" class="form-control" name="researcherReDate" aria-describedby="passwordHelpInline" placeholder="Registerd Date">
-						      </div>
-						    </div>
-						  </div>						
+											
 						<br> 
 						
 						<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary btn-lg btn-block"> 

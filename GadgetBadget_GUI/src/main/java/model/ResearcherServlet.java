@@ -75,12 +75,11 @@ public class ResearcherServlet {
 				 
 				 // Prepare the html table to be displayed
 				 output = "<table border='1'><tr><th>researcher Name</th>"
-				 + "<th>researcherName</th>" +
-				 "<th>researcherEmail</th>" + 
-				 "<th>researcherNumber</th>" + 
-				 "<th>researcherAddress</th>" +
-				 "<th>researcherProductType</th>" +
-				 "<th>researcherReDate</th>" +
+				 + "<th>researcher Email</th>" + 
+				 "<th>researcher Number</th>" + 
+				 "<th>researcher Address</th>" +
+				 "<th>Product Type</th>" +
+				 "<th>Registerg Date</th>" +
 				 "<th>Update</th><th>Remove</th></tr>"; 
 			 
 				 
