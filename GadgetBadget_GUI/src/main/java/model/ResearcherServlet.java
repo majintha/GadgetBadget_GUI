@@ -14,7 +14,7 @@ public class ResearcherServlet {
 		Connection con = null; 
 		try
 		{ 
-			Class.forName("com.mysql.jdbc.Driver");  
+			Class.forName("com.mysql.cj.jdbc.Driver");  
 			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?useTimezone=true&serverTimezone=UTC", "root", ""); 
 		} 
 		catch (Exception e) 
@@ -74,8 +74,9 @@ public class ResearcherServlet {
 				 } 
 				 
 				 // Prepare the html table to be displayed
-				 output = "<table border='1'><tr><th>researcher Name</th>"
-				 + "<th>researcher Email</th>" + 
+				 output = "<table border='1'><tr><th>researcherID</th>"
+						 + "<th>researcher Name</th>" +
+				  "<th>researcher Email</th>" + 
 				 "<th>researcher Number</th>" + 
 				 "<th>researcher Address</th>" +
 				 "<th>Product Type</th>" +
@@ -100,7 +101,8 @@ public class ResearcherServlet {
 					 
 					 
 					 // Add into the html table
-					 output += "<tr><td>" + researcherName + "</td>"; 
+					 output += "<tr><td>" + researcherID + "</td>"; 
+					 output += "<td>" + researcherName + "</td>";
 					 output += "<td>" + researcherEmail + "</td>"; 
 					 output += "<td>" + researcherNumber + "</td>"; 
 					 output += "<td>" + researcherAddress + "</td>"; 
@@ -108,18 +110,18 @@ public class ResearcherServlet {
 					 output += "<td>" + researcherReDate + "</td>"; 					 
 					 
 					 
-					 // buttons
+					// buttons
 					 output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
-					 + "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-itemid='" 
-					 + researcherID + "'>" + "</td></tr>";
-				 } 
+							 + "<td><button class='btnRemove btn btn-danger' name='btnRemove' id ='btnRemove' value='"+ researcherID +"' >Remove</button></td></tr>";
+				 }
+					  
 				 	 con.close(); 
 				 	 // Complete the html table
 				 	 output += "</table>"; 
 			 } 
 			 catch (Exception e) 
 			 { 
-				 output = "Error while reading the investment"; 
+				 output = "Error while reading the researcher"; 
 				 System.err.println(e.getMessage()); 
 			 } 
 		 	 return output; 
@@ -176,7 +178,7 @@ public class ResearcherServlet {
 			 } 
 			 
 			 	 // create a prepared statement
-				 String query = "DELETE FROM researcher_gui WHERE investmentID=?"; 
+				 String query = "DELETE FROM researcher_gui WHERE researcherID=?"; 
 				 PreparedStatement preparedStmt = con.prepareStatement(query); 
 				 
 				 // binding values

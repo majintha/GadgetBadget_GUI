@@ -24,7 +24,7 @@ $(document).on("click", "#btnSave", function(event) {
 	}
 	
 	// If valid------------------------
-	var type = ($("#hidResearcherIDSave").val() == "") ? "POST" : "PUT";
+	var type = ($("#researcherID").val() == "") ? "POST" : "PUT";
 
 	$.ajax({
 		url : "ResearcherAPI",
@@ -67,7 +67,7 @@ function onItemSaveComplete(response, status) {
 		$("#alertError").show();
 	}
 	
-	$("#hidResearcherIDSave").val("");
+	$("#researcherID").val("");
 	$("#RESEARCHER")[0].reset();
 }
 
@@ -76,7 +76,7 @@ $(document).on("click", ".btnRemove", function(event) {
 	$.ajax({
 		url : "ResearcherAPI",
 		type : "DELETE",
-		data : "researcherID=" + $(this).data("researcherID"),
+		data : "researcherID=" + event.target.value,
 		dataType : "text",
 		complete : function(response, status) {
 			onItemDeleteComplete(response.responseText, status);
@@ -117,13 +117,13 @@ function onItemDeleteComplete(response, status) {
 // UPDATE==========================================
 $(document).on("click",".btnUpdate",function(event)
 		{
-			$("#hidResearcherIDSave").val($(this).data("researcherID"));
-			$("#researcherName").val($(this).closest("tr").find('td:eq(0)').text());
-			$("#researcherEmail").val($(this).closest("tr").find('td:eq(1)').text());
-			$("#researcherNumber").val($(this).closest("tr").find('td:eq(2)').text());
-			$("#researcherAddress").val($(this).closest("tr").find('td:eq(3)').text());
-			$("#researcherProductType").val($(this).closest("tr").find('td:eq(4)').text());
-			$("#researcherReDate").val($(this).closest("tr").find('td:eq(5)').text());		
+			$("#researcherID").val($(this).closest("tr").find('td:eq(0)').text());
+			$("#researcherName").val($(this).closest("tr").find('td:eq(1)').text());
+			$("#researcherEmail").val($(this).closest("tr").find('td:eq(2)').text());
+			$("#researcherNumber").val($(this).closest("tr").find('td:eq(3)').text());
+			$("#researcherAddress").val($(this).closest("tr").find('td:eq(4)').text());
+			$("#researcherProductType").val($(this).closest("tr").find('td:eq(5)').text());
+			$("#researcherReDate").val($(this).closest("tr").find('td:eq(6)').text());		
 		});
 
 

@@ -34,6 +34,7 @@
 						
 						<div class="form-outline mb-4">
 						    <label class="form-label" for="form6Example3" class="col-sm-2 col-form-label col-form-label-sm">Researcher Name:</label>
+						    <input type="hidden" id="researcherID" name="researcherID" value="">
 						    <input type="text" id="researcherName" class="form-control" name="researcherName" placeholder="Enter researcher Name..">						    
 						</div>
 						
@@ -44,7 +45,7 @@
 						
 						<div class="form-outline mb-4">
 						    <label class="form-label" for="form6Example3" class="col-sm-2 col-form-label col-form-label-sm">researcher Number:</label>
-						    <input type="text" id="researcherNumber" class="form-control" name="researcherNumber" placeholder="Enter Investor number..">						    
+						    <input type="text" id="researcherNumber" class="form-control" name="researcherNumber" placeholder="Enter researcher number..">						    
 						</div>
 						
 						<div class="form-outline mb-4">
@@ -65,13 +66,13 @@
 						 
 											
 						<br> 
-						
+						<div id="alertSuccess" class="alert alert-success"></div>
+						<div id="alertError" class="alert alert-danger"></div>
 						<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary btn-lg btn-block"> 
-						<input type="hidden" id="hidResearcherIDSave" name="hidResearcherIDSave" value="">
+						
 					</form>
 				
-					<div id="alertSuccess" class="alert alert-success"></div>
-					<div id="alertError" class="alert alert-danger"></div>			
+								
 			</fieldset>
 			
 			<br> 
